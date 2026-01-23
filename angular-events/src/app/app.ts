@@ -11,3 +11,4 @@ import { EventsShow } from './events-show/events-show';
 export class App {
   protected readonly title = signal('angular-events');
 }
+
