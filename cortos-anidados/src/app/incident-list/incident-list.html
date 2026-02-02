@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <td>Tipo</td>
+        <td>Descripcion</td>
+        <td>Estado</td>
+    </tr>
+    @for (inc of incidencias; track inc) {
+        <tr>
+            <app-incident-item [incidencia]="inc" (estadoCambiado)="inc.estado=$event"></app-incident-item>
+        </tr>    
+    }
+</table>

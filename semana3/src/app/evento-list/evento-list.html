@@ -1,0 +1,5 @@
+@for (ev of eventos; track ev) {
+    <tr>
+        <app-evento-item [evento]="ev" (estadoCambiado)="inc.estado=$event"></app-evento-item>
+    </tr>    
+}
