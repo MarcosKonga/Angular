@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { EventoItem } from './evento-item/evento-item';
+import { EventoList } from "./evento-list/evento-list";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, EventoItem],
+  imports: [RouterOutlet, EventoItem, EventoList],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

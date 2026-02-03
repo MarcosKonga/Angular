@@ -1,5 +1,6 @@
-@for (ev of eventos; track ev) {
-    <tr>
-        <app-evento-item [evento]="ev" (estadoCambiado)="inc.estado=$event"></app-evento-item>
-    </tr>    
-}
+<app-evento-item class="border border-dark"
+  *ngFor="let evento of eventos"
+  [evento]="evento"
+  (delete)="deleteEvento(evento)">
+</app-evento-item>
+<app-evento-add (add)="addEvento($event)"></app-evento-add>

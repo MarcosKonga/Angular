@@ -1,0 +1,32 @@
+<form (ngSubmit)="addEvent()" class="mt-4">
+
+  <input class="form-control mb-2"
+         [(ngModel)]="newEvent.title"
+         name="title"
+         placeholder="Título"> <br>
+        
+  <textarea class="form-control mb-2"
+            [(ngModel)]="newEvent.description"
+            name="description"></textarea> <br>
+
+  <input type="date"
+         class="form-control mb-2"
+         [(ngModel)]="newEvent.date"
+         name="date"> <br>
+
+  <input type="number"
+         class="form-control mb-2"
+         [(ngModel)]="newEvent.price"
+         name="price"> <br>
+
+  <input type="file"
+         class="form-control mb-2"
+         #file
+         (change)="changeImage(file)"> <br>
+
+  <img *ngIf="newEvent.image"
+       [src]="newEvent.image"
+       class="img-thumbnail mb-2"> <br>
+
+  <button class="btn btn-success">Add event</button>
+</form>

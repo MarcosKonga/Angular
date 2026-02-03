@@ -1,6 +1,6 @@
 import { Component,EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IEvent } from '../interfaces/ievent';
+import { IEvent } from '../interfaces/i-event';
 
 @Component({
   selector: 'app-evento-item',
@@ -10,9 +10,10 @@ import { IEvent } from '../interfaces/ievent';
   host: { class: 'card' }
 })
 export class EventoItem {
-  @Input() evento:any;
+  @Input() evento!:IEvent;
 
   @Output() delete = new EventEmitter<void>();
+
   deleteEvento() {
     this.delete.emit();
   }
