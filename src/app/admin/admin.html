@@ -1,0 +1,12 @@
+<h2>Gestión de platos</h2>
+<h3>Nuevo plato</h3>
+<input [(ngModel)]="newDish.name" placeholder="Nombre">
+<input [(ngModel)]="newDish.description" placeholder="Descripción">
+<input [(ngModel)]="newDish.price" type="number" placeholder="Precio">
+<input [(ngModel)]="newDish.category" placeholder="Categoría">
+<button (click)="addDish()">Añadir</button>
+<hr>
+<div *ngFor="let dish of dishes">
+  {{ dish.name }} - {{ dish.price }}
+  <button (click)="deleteDish(dish.id!)">Eliminar</button>
+</div>
